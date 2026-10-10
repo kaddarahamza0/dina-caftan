@@ -532,7 +532,7 @@ figure { margin: 0; }
 
 /* ---------- Floating WhatsApp ---------- */
 .wa-float {
-  position: fixed; right: 18px; bottom: 18px; z-index: 60;
+  position: fixed; right: 18px; bottom: 76px; z-index: 60;
   display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%;
   background: var(--wa); color: #fff; box-shadow: 0 12px 28px -8px rgba(31, 175, 85, .6);
   transition: transform .25s var(--ease), background-color .25s var(--ease);
