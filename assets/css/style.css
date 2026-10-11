@@ -207,7 +207,7 @@ fieldset { border: 0; min-width: 0; }
 }
 .hero__track::-webkit-scrollbar { display: none; }
 .slide {
-  position: relative; flex: 0 0 100%; scroll-snap-align: center; scroll-snap-stop: always;
+  position: relative; flex: 0 0 100%; scroll-snap-align: center;
   aspect-ratio: 4 / 5; max-height: 74svh; min-height: 440px;
   border-radius: var(--r-lg); overflow: hidden; background: var(--night); color: #fff; isolation: isolate;
 }
