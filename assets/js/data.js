@@ -31,6 +31,9 @@ DC.sizes = {
 
 // Demo catalogue: placeholder photos (Pexels, free licence) until the boutique's own photos arrive.
 // Prices are "à partir de" (starting from). badge: bestseller | new | bride | winter
+// To use a photo taken with a phone: upload it to assets/img/p/ and add to the product:
+//   photo: "assets/img/p/mon-caftan.jpg",        (main photo)
+//   photo2: "assets/img/p/mon-caftan-zoom.jpg",  (optional close-up)
 DC.products = [
   {
     id: "velours-royal", cat: "caftan", price: 2450, badge: "bestseller", isNew: true, order: 1,

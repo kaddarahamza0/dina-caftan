@@ -27,7 +27,15 @@
   function money(n) { return nf.format(n) + " " + t("currency"); }
   function wa(text) { return "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(text); }
   function byId(id) { for (var i = 0; i < DC.products.length; i++) if (DC.products[i].id === id) return DC.products[i]; return null; }
-  function img(p, v) { return "assets/img/p/" + p.id + "-" + v + ".webp"; }
+  // A product can use a plain photo instead of the generated webp set:
+  //   photo: "assets/img/p/mon-caftan.jpg"   (photo2: optional close-up)
+  function img(p, v) {
+    if (v === "d" && p.photo2) return p.photo2;
+    if (p.photo) return p.photo;
+    return "assets/img/p/" + p.id + "-" + v + ".webp";
+  }
+  function hasDetail(p) { return !p.photo || !!p.photo2; }
+  function srcset(p) { return p.photo ? "" : ' srcset="' + img(p, "400") + " 400w, " + img(p, "800") + ' 800w"'; }
   function ico(id, cls) { return '<svg class="ic' + (cls ? " " + cls : "") + '"><use href="#i-' + id + '"/></svg>'; }
   function sizesOf(p) { return p.kids ? DC.sizes.kids : DC.sizes.adult; }
   function sizeLabel(p, s) {
@@ -116,7 +124,7 @@
     var badge = p.badge ? '<span class="badge badge--' + p.badge + '">' + esc(t("badge_" + p.badge)) + "</span>" : "";
     return '<article class="card">' +
       '<a class="card__media" href="#p/' + p.id + '" data-open="' + p.id + '" aria-label="' + esc(t("view", { name: name })) + '">' + badge +
-        '<img src="' + img(p, "400") + '" srcset="' + img(p, "400") + " 400w, " + img(p, "800") + ' 800w" sizes="' + sizes + '" width="800" height="1000" alt="' + esc(name + ", " + fabric) + '" loading="lazy" decoding="async">' +
+        '<img src="' + img(p, "400") + '"' + srcset(p) + ' sizes="' + sizes + '" width="800" height="1000" alt="' + esc(name + ", " + fabric) + '" loading="lazy" decoding="async">' +
       "</a>" +
       '<button class="fav" type="button" data-fav="' + p.id + '" aria-pressed="' + faved + '" aria-label="' + esc(faved ? t("removeFav") : t("addFav")) + '"><span>' + ico("heart") + "</span></button>" +
       '<div class="card__info">' +
@@ -303,9 +311,9 @@
       '<div class="pgal">' +
         '<div class="pgal__track" data-pgal>' +
           '<img src="' + img(p, "800") + '" width="800" height="1000" alt="' + esc(name) + '">' +
-          '<img src="' + img(p, "d") + '" width="800" height="1000" alt="' + esc(name + ", " + L(p.fabric)) + '" loading="lazy">' +
+          (hasDetail(p) ? '<img src="' + img(p, "d") + '" width="800" height="1000" alt="' + esc(name + ", " + L(p.fabric)) + '" loading="lazy">' : "") +
         "</div>" +
-        '<span class="pgal__count" data-pgal-count>1 / 2</span>' +
+        (hasDetail(p) ? '<span class="pgal__count" data-pgal-count>1 / 2</span>' : "") +
       "</div>" +
       '<div class="pinfo">' +
         '<div class="pinfo__top"><div>' +
@@ -328,7 +336,7 @@
       '<a class="btn btn--wa btn--lg" data-pwa href="' + productWa() + '" target="_blank" rel="noopener">' + ico("wa") + "<span>" + esc(t("orderWa")) + "</span></a>";
 
     var track = $("[data-pgal]"), count = $("[data-pgal-count]");
-    track.addEventListener("scroll", function () {
+    if (count) track.addEventListener("scroll", function () {
       var i = Math.round(Math.abs(track.scrollLeft) / track.clientWidth);
       count.textContent = (i + 1) + " / 2";
     }, { passive: true });
@@ -514,7 +522,7 @@
       var p = byId(id);
       if (!p) return;
       out.push({ img: img(p, "800"), cap: L(p.name), sub: t("from") + " " + money(p.price), cta: "product", id: id });
-      if (g.details) out.push({ img: img(p, "d"), cap: L(p.name), sub: L(p.fabric), cta: "product", id: id });
+      if (g.details && hasDetail(p)) out.push({ img: img(p, "d"), cap: L(p.name), sub: L(p.fabric), cta: "product", id: id });
     });
     return out;
   }
