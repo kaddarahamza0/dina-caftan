@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Kaushan+Script&family=Montserrat:wght@400;500;600&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/img/hero/slide-1-720.webp" imagesrcset="assets/img/hero/slide-1-720.webp 720w, assets/img/hero/slide-1-1080.webp 1080w" imagesizes="(min-width: 1024px) 520px, 100vw">
+  <link rel="preload" as="image" href="assets/img/hero/store-720.webp" imagesrcset="assets/img/hero/store-720.webp 720w, assets/img/hero/store-1080.webp 1080w" imagesizes="(min-width: 1024px) 520px, 100vw">
   <link rel="stylesheet" href="assets/css/style.css">
   <script>
     (function () {
@@ -68,7 +68,8 @@
 
 <!-- Announcement -->
 <div class="ann" role="note">
-  <p class="ann__msg is-on"><svg class="ic"><use href="#i-truck"/></svg><span data-i18n="ann1">Livraison partout au Maroc</span></p>
+  <p class="ann__msg is-on"><svg class="ic"><use href="#i-pin"/></svg><span data-i18n="ann0">Centre El Khalil, Av. Khalil Jabran · El Jadida</span></p>
+  <p class="ann__msg"><svg class="ic"><use href="#i-truck"/></svg><span data-i18n="ann1">Livraison partout au Maroc</span></p>
   <p class="ann__msg"><svg class="ic"><use href="#i-wa"/></svg><span data-i18n="ann2">Commande simple sur WhatsApp</span></p>
   <p class="ann__msg"><svg class="ic"><use href="#i-scissors"/></svg><span data-i18n="ann3">Essayage &amp; sur mesure en boutique</span></p>
 </div>
@@ -120,13 +121,28 @@
   <!-- Hero carousel -->
   <section class="hero" aria-roledescription="carousel">
     <div class="hero__track" data-hero-track>
+      <article class="slide slide--store" aria-roledescription="slide">
+        <picture class="slide__media">
+          <img src="assets/img/hero/store-720.webp" srcset="assets/img/hero/store-720.webp 720w, assets/img/hero/store-1080.webp 1080w" sizes="(min-width: 1024px) 520px, 100vw" width="1080" height="1350" alt="Façade de la boutique Dina Caftan by Basma, Centre El Khalil à El Jadida" fetchpriority="high">
+        </picture>
+        <div class="slide__body">
+          <p class="status status--glass" data-open-status><span class="status__dot"></span><span class="status__txt"></span></p>
+          <h1 class="slide__brand">Dina Caftan <span>by Basma</span></h1>
+          <p class="slide__loc"><svg class="ic"><use href="#i-pin"/></svg><span data-i18n="heroLoc">Av. Khalil Jabran, El Jadida</span></p>
+          <p class="slide__text" data-i18n="heroStoreText">Caftans, takchitas et jellabas brodés main. Venez essayer en boutique, tous les jours de 9h à 23h.</p>
+          <div class="slide__ctas">
+            <a class="btn btn--gold" data-maps-dir href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-nav"/></svg><span data-i18n="directions">Itinéraire</span></a>
+            <a class="btn btn--glass" data-wa="waDefault" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+          </div>
+        </div>
+      </article>
       <article class="slide" aria-roledescription="slide">
         <picture class="slide__media">
-          <img src="assets/img/hero/slide-1-720.webp" srcset="assets/img/hero/slide-1-720.webp 720w, assets/img/hero/slide-1-1080.webp 1080w" sizes="(min-width: 1024px) 520px, 100vw" width="1080" height="1350" alt="Caftan en velours bleu roi brodé d’or" fetchpriority="high">
+          <img src="assets/img/hero/slide-1-720.webp" srcset="assets/img/hero/slide-1-720.webp 720w, assets/img/hero/slide-1-1080.webp 1080w" sizes="(min-width: 1024px) 520px, 100vw" width="1080" height="1350" alt="Caftan en velours bleu roi brodé d’or" loading="lazy">
         </picture>
         <div class="slide__body">
           <p class="slide__eyebrow"><svg class="ic"><use href="#i-star8"/></svg><span data-i18n="h1Eyebrow">Collection 2026</span></p>
-          <h1 class="slide__title" data-i18n-html="h1Title">L’élégance du caftan <em>marocain</em></h1>
+          <h2 class="slide__title" data-i18n-html="h1Title">L’élégance du caftan <em>marocain</em></h2>
           <p class="slide__text" data-i18n="h1Text">Broderies faites main et tissus nobles, signés Basma à El Jadida.</p>
           <div class="slide__ctas">
             <a class="btn btn--gold" href="#collection"><span data-i18n="h1Cta">Découvrir</span><svg class="ic ic--flip"><use href="#i-arrow"/></svg></a>
@@ -147,19 +163,6 @@
           </div>
         </div>
       </article>
-      <article class="slide" aria-roledescription="slide">
-        <picture class="slide__media">
-          <img src="assets/img/hero/slide-3.webp" width="558" height="698" alt="Vitrine de la boutique Dina Caftan à El Jadida" loading="lazy">
-        </picture>
-        <div class="slide__body">
-          <p class="slide__eyebrow"><svg class="ic"><use href="#i-pin"/></svg><span data-i18n="h3Eyebrow">El Jadida</span></p>
-          <h2 class="slide__title" data-i18n-html="h3Title">Venez <em>essayer</em> en boutique</h2>
-          <p class="slide__text" data-i18n="h3Text">Centre El Khalil, Av. Khalil Jabran. Ouvert tous les jours.</p>
-          <div class="slide__ctas">
-            <a class="btn btn--gold" data-maps-dir href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-nav"/></svg><span data-i18n="h3Cta">Itinéraire</span></a>
-          </div>
-        </div>
-      </article>
     </div>
     <div class="hero__dots" data-hero-dots></div>
   </section>
@@ -172,6 +175,46 @@
     <li><svg class="ic"><use href="#i-wa"/></svg><span data-i18n="perk4">Commande WhatsApp</span></li>
     <li><svg class="ic"><use href="#i-store"/></svg><span data-i18n="perk5">Essayage en boutique</span></li>
   </ul>
+
+  <!-- Boutique -->
+  <section class="sec" id="boutique">
+    <div class="wrap">
+      <header class="sec__head">
+        <p class="eyebrow" data-i18n="storeEyebrow">La boutique</p>
+        <h2 class="sec__title" data-i18n="storeTitle">Venez nous rendre visite</h2>
+        <p class="sec__text" data-i18n="storeText">Essayez nos pièces et laissez-vous conseiller dans notre boutique d’El Jadida.</p>
+      </header>
+    </div>
+    <div class="rail rail--photos">
+      <figure class="photo"><img src="assets/img/store/facade-2.webp" width="900" height="1125" alt="Façade de la boutique Dina Caftan by Basma, enseigne dorée" loading="lazy"><figcaption data-i18n="storeFacade">La façade</figcaption></figure>
+      <figure class="photo"><img src="assets/img/store/vitrine-hd.webp" width="660" height="825" alt="Caftans bordeaux, gris et olive en vitrine" loading="lazy"><figcaption data-i18n="storeWindow">La vitrine</figcaption></figure>
+      <figure class="photo"><img src="assets/img/store/interieur.webp" width="612" height="765" alt="Intérieur de la boutique, comptoir Dina Caftan" loading="lazy"><figcaption data-i18n="storeInside">L’intérieur</figcaption></figure>
+      <figure class="photo"><img src="assets/img/store/vitrine.webp" width="582" height="698" alt="Caftans en velours bleu et bordeaux en vitrine" loading="lazy"><figcaption data-i18n="storeNew">En vitrine</figcaption></figure>
+    </div>
+    <div class="wrap store">
+      <div class="store__card" id="contact">
+        <p class="status" data-open-status><span class="status__dot"></span><span class="status__txt"></span></p>
+        <h3 class="store__name">Dina Caftan <span>by Basma</span></h3>
+        <ul class="store__info">
+          <li><svg class="ic"><use href="#i-pin"/></svg><div><strong data-i18n="address">Adresse</strong><span data-i18n-html="addressText">Centre El Khalil, Av. Khalil Jabran<br>El Jadida, Maroc</span></div></li>
+          <li><svg class="ic"><use href="#i-clock"/></svg><div><strong data-i18n="hoursLabel">Horaires</strong><span data-i18n="hoursText">Tous les jours · 09h00 – 23h00</span></div></li>
+          <li><svg class="ic"><use href="#i-phone"/></svg><div><strong data-i18n="phone">Téléphone</strong><a data-tel href="#" dir="ltr">07 17 00 61 05</a></div></li>
+        </ul>
+        <div class="store__btns">
+          <a class="qbtn" data-maps-dir href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-nav"/></svg><span data-i18n="directions">Itinéraire</span></a>
+          <a class="qbtn" data-tel href="#"><svg class="ic"><use href="#i-phone"/></svg><span data-i18n="call">Appeler</span></a>
+          <a class="qbtn qbtn--wa" data-wa="waDefault" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+        </div>
+      </div>
+      <div class="map" data-map>
+        <div class="map__ph">
+          <span class="map__pin"><svg class="ic"><use href="#i-pin"/></svg></span>
+          <strong data-i18n="mapTitle">Centre El Khalil, El Jadida</strong>
+          <button class="btn btn--dark btn--sm" type="button" data-map-load><span data-i18n="mapLoad">Afficher la carte</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- New arrivals -->
   <section class="sec" id="nouveautes">
@@ -282,7 +325,7 @@
     <div class="wrap bespoke">
       <div class="bespoke__media">
         <img src="assets/img/p/abaya-sable-800.webp" width="800" height="1000" alt="Caftan sable à broderie florale" loading="lazy">
-        <img class="bespoke__thumb" src="assets/img/store/vitrine-detail.webp" width="411" height="370" alt="Vitrine de la boutique avec caftans en velours" loading="lazy">
+        <img class="bespoke__thumb" src="assets/img/store/vitrine-hd.webp" width="660" height="825" alt="Vitrine de la boutique avec caftans en velours" loading="lazy">
       </div>
       <div class="bespoke__body">
         <p class="eyebrow" data-i18n="bespEyebrow">Sur mesure</p>
@@ -312,45 +355,6 @@
       <span>Henné</span><svg class="ic"><use href="#i-star8"/></svg><span lang="ar">حناء</span><svg class="ic"><use href="#i-star8"/></svg>
     </div>
   </div>
-
-  <!-- Boutique -->
-  <section class="sec" id="boutique">
-    <div class="wrap">
-      <header class="sec__head">
-        <p class="eyebrow" data-i18n="storeEyebrow">La boutique</p>
-        <h2 class="sec__title" data-i18n="storeTitle">Venez nous rendre visite</h2>
-        <p class="sec__text" data-i18n="storeText">Essayez nos pièces et laissez-vous conseiller dans notre boutique d’El Jadida.</p>
-      </header>
-    </div>
-    <div class="rail rail--photos">
-      <figure class="photo"><img src="assets/img/store/facade.webp" width="621" height="535" alt="Façade de la boutique Dina Caftan by Basma, enseigne dorée" loading="lazy"><figcaption data-i18n="storeFacade">La façade</figcaption></figure>
-      <figure class="photo"><img src="assets/img/store/vitrine.webp" width="582" height="698" alt="Vitrine avec caftans en velours bleu et bordeaux" loading="lazy"><figcaption data-i18n="storeWindow">La vitrine</figcaption></figure>
-      <figure class="photo"><img src="assets/img/store/vitrine-detail.webp" width="411" height="370" alt="Caftans exposés en vitrine" loading="lazy"><figcaption data-i18n="storeNew">En vitrine</figcaption></figure>
-    </div>
-    <div class="wrap store">
-      <div class="store__card" id="contact">
-        <p class="status" data-open-status><span class="status__dot"></span><span class="status__txt"></span></p>
-        <h3 class="store__name">Dina Caftan <span>by Basma</span></h3>
-        <ul class="store__info">
-          <li><svg class="ic"><use href="#i-pin"/></svg><div><strong data-i18n="address">Adresse</strong><span data-i18n-html="addressText">Centre El Khalil, Av. Khalil Jabran<br>El Jadida, Maroc</span></div></li>
-          <li><svg class="ic"><use href="#i-clock"/></svg><div><strong data-i18n="hoursLabel">Horaires</strong><span data-i18n="hoursText">Tous les jours · 09h00 – 23h00</span></div></li>
-          <li><svg class="ic"><use href="#i-phone"/></svg><div><strong data-i18n="phone">Téléphone</strong><a data-tel href="#" dir="ltr">07 17 00 61 05</a></div></li>
-        </ul>
-        <div class="store__btns">
-          <a class="qbtn" data-maps-dir href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-nav"/></svg><span data-i18n="directions">Itinéraire</span></a>
-          <a class="qbtn" data-tel href="#"><svg class="ic"><use href="#i-phone"/></svg><span data-i18n="call">Appeler</span></a>
-          <a class="qbtn qbtn--wa" data-wa="waDefault" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
-        </div>
-      </div>
-      <div class="map" data-map>
-        <div class="map__ph">
-          <span class="map__pin"><svg class="ic"><use href="#i-pin"/></svg></span>
-          <strong data-i18n="mapTitle">Centre El Khalil, El Jadida</strong>
-          <button class="btn btn--dark btn--sm" type="button" data-map-load><span data-i18n="mapLoad">Afficher la carte</span></button>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- FAQ -->
   <section class="sec sec--alt" id="faq">

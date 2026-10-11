@@ -135,18 +135,19 @@ DC.products = [
 
 // Story circles at the top of the page (Instagram-style)
 DC.stories = [
+  { id: "boutique", title: { fr: "Boutique", ar: "المحل" }, thumb: "assets/img/store/thumb.webp",
+    items: [
+      { img: "assets/img/store/facade-hd.webp", cap: { fr: "Dina Caftan by Basma", ar: "دينا قفطان" }, sub: { fr: "Centre El Khalil, Av. Khalil Jabran · El Jadida", ar: "مركز الخليل، شارع خليل جبران · الجديدة" }, cta: "maps" },
+      { img: "assets/img/store/vitrine-hd.webp", cap: { fr: "Notre vitrine", ar: "الفيترينة ديالنا" }, sub: { fr: "Velours, brocart et broderies : venez essayer", ar: "مخمل، بروكار وطرز: مرحبا بيك تجربي" }, cta: "wa" },
+      { img: "assets/img/store/interieur.webp", cap: { fr: "Bienvenue chez nous", ar: "مرحبا بيك عندنا" }, sub: { fr: "Ouvert tous les jours · 09h – 23h", ar: "مفتوح كل يوم · من 09:00 حتى 23:00" }, cta: "maps" },
+      { img: "assets/img/store/facade-2.webp", cap: { fr: "Av. Khalil Jabran", ar: "شارع خليل جبران" }, sub: { fr: "À côté du Centre dentaire Al Khalil", ar: "حدا مركز طب الأسنان الخليل" }, cta: "maps" }
+    ] },
   { id: "new", title: { fr: "Nouveautés", ar: "جديد" }, thumb: "assets/img/p/velours-royal-400.webp",
     products: ["velours-royal", "takchita-emeraude", "lalla-violette", "caftan-perle", "mini-lalla"] },
   { id: "caftan", title: { fr: "Caftans", ar: "قفاطن" }, thumb: "assets/img/p/lalla-violette-400.webp",
     products: ["lalla-violette", "sabra-ivoire", "sauge-brode", "caftan-perle", "velours-royal"] },
   { id: "takchita", title: { fr: "Mariée", ar: "العروس" }, thumb: "assets/img/p/takchita-emeraude-400.webp",
     products: ["takchita-emeraude", "rouge-fes"], details: true },
-  { id: "boutique", title: { fr: "Boutique", ar: "المحل" }, thumb: "assets/img/store/facade.webp",
-    items: [
-      { img: "assets/img/store/facade.webp", cap: { fr: "Notre boutique", ar: "المحل ديالنا" }, sub: { fr: "Centre El Khalil, Av. Khalil Jabran · El Jadida", ar: "مركز الخليل، شارع خليل جبران · الجديدة" }, cta: "maps" },
-      { img: "assets/img/store/vitrine.webp", cap: { fr: "Notre vitrine", ar: "الواجهة ديالنا" }, sub: { fr: "Velours, brocart et broderies : venez essayer", ar: "مخمل، بروكار وطرز: مرحبا بيك تجربي" }, cta: "maps" },
-      { img: "assets/img/store/vitrine-detail.webp", cap: { fr: "Nouvelle collection en vitrine", ar: "المجموعة الجديدة فالواجهة" }, sub: { fr: "Ouvert tous les jours", ar: "مفتوح كل يوم" }, cta: "wa" }
-    ] },
   { id: "jellaba", title: { fr: "Jellabas", ar: "جلابات" }, thumb: "assets/img/p/satin-majorelle-400.webp",
     products: ["satin-majorelle", "jellaba-nuit", "abaya-sable"] },
   { id: "enfant", title: { fr: "Enfants", ar: "أطفال" }, thumb: "assets/img/p/mini-lalla-400.webp",
@@ -167,6 +168,10 @@ DC.t = {
   catTakchita: { fr: "Takchitas", ar: "تكشيطات" },
   catJellaba: { fr: "Jellabas", ar: "جلابات" },
   catEnfant: { fr: "Enfants", ar: "أطفال" },
+  ann0: { fr: "Centre El Khalil, Av. Khalil Jabran · El Jadida", ar: "مركز الخليل، شارع خليل جبران · الجديدة" },
+  heroLoc: { fr: "Av. Khalil Jabran, El Jadida", ar: "شارع خليل جبران، الجديدة" },
+  heroStoreText: { fr: "Caftans, takchitas et jellabas brodés main. Venez essayer en boutique, tous les jours de 9h à 23h.", ar: "قفاطن، تكشيطات وجلابات مطرزة باليد. مرحبا بيك تجربي فالمحل، كل يوم من 9 الصباح حتى 11 الليل." },
+  storeInside: { fr: "L’intérieur", ar: "من الداخل" },
   ann1: { fr: "Livraison partout au Maroc", ar: "التوصيل لجميع مدن المغرب" },
   ann2: { fr: "Commande simple sur WhatsApp", ar: "الطلب ساهل عبر واتساب" },
   ann3: { fr: "Essayage & sur mesure en boutique", ar: "التجربة والخياطة حسب الطلب فالمحل" },
@@ -248,7 +253,7 @@ DC.t = {
   step4t: { fr: "Un dernier essayage pour un tombé parfait.", ar: "تجربة أخيرة باش يجي اللبس مزيان." },
 
   storeEyebrow: { fr: "La boutique", ar: "المحل" },
-  storeTitle: { fr: "Venez nous rendre visite", ar: "مرحبا بيك عندنا" },
+  storeTitle: { fr: "Notre boutique à El Jadida", ar: "المحل ديالنا فالجديدة" },
   storeText: { fr: "Essayez nos pièces et laissez-vous conseiller dans notre boutique d’El Jadida.", ar: "جربي القطع ديالنا وخدي النصيحة فالمحل ديالنا فالجديدة." },
   storeFacade: { fr: "La façade", ar: "الواجهة" },
   storeWindow: { fr: "La vitrine", ar: "الفيترينة" },

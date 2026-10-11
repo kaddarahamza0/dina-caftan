@@ -225,6 +225,19 @@ fieldset { border: 0; min-width: 0; }
 :root[lang="ar"] .slide__title { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
 :root[lang="ar"] .slide__title em { font-style: normal; }
 .slide__text { font-size: 14px; color: rgba(255, 255, 255, .84); max-width: 34ch; }
+:root[lang="ar"] .slide__text { font-size: 15px; }
+.slide--store::after { background: linear-gradient(to top, rgba(22, 17, 14, .95) 0%, rgba(22, 17, 14, .7) 30%, rgba(22, 17, 14, 0) 54%); }
+.slide--store .slide__body { gap: 8px; padding-bottom: 20px; }
+.slide__brand { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; font-size: clamp(2rem, 1.5rem + 2.4vw, 3.8rem); line-height: 1.05; direction: ltr; }
+.slide__brand span { display: inline-block; font-family: var(--f-script); font-weight: 400; font-size: .55em; color: var(--gold); margin-inline-start: 4px; }
+@media (max-width: 1023px) { .slide--store .slide__text { display: none; } }
+.slide__loc { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: #fff; }
+:root[lang="ar"] .slide__loc { font-size: 15px; }
+.slide__loc .ic { width: 18px; height: 18px; color: var(--gold); }
+.slide .status--glass { background: rgba(255, 255, 255, .16); color: #fff; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.slide .status--glass.is-open { background: rgba(30, 158, 87, .3); color: #DDF7E8; }
+.slide .status--glass.is-closed { background: rgba(179, 57, 47, .35); color: #FDE4E1; }
+.slide .status--glass.is-closed .status__dot { background: #FF8A80; }
 .slide__ctas { display: flex; gap: 10px; margin-top: 6px; }
 .hero__dots { display: flex; justify-content: center; gap: 2px; padding-top: 6px; }
 .hero__dot { width: 30px; height: 26px; display: grid; place-items: center; }
