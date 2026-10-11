@@ -114,6 +114,8 @@ photo2: "assets/img/p/caftan-rouge-zoom.jpg",   // اختياري: تصويرة 
 
 ## 8. الربط بين Netlify و GitHub (مرة وحدة)
 
+> ✅ **الربط مدار.** أي تبديل فـ GitHub كيتنشر فالسيت بوحدو فدقيقة.
+
 1. app.netlify.com ← **dina-caftan** ← **Project configuration** ← **Build & deploy** ← **Link repository**.
 2. **GitHub** ← **Authorize** ← اختار `dina-caftan`.
 3. Branch: `main`. خلي **Build command** و **Publish directory** خاويين.
